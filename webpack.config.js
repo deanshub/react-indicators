@@ -1,0 +1,43 @@
+var path = require('path');
+var webpack = require('webpack');
+
+module.exports = {
+  devtool: 'eval',
+  entry: [
+    'webpack-hot-middleware/client',
+    './src/index'
+  ],
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/static/'
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+        $: "jquery"
+    }),
+  ],
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      loaders: ['babel'],
+      include: path.join(__dirname, 'src')
+    },{
+      test: /\.css$/,
+      loaders:['style-loader', 'css-loader']
+    },{
+      test: /\.woff2?(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url?limit=10000&minetype=application/font-woff'
+    },{
+      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file'
+    },{
+      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url?limit=10000&minetype=image/svg+xml'
+    },{
+      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url?limit=10000&minetype=application/octet-stream'
+    },]}
+};

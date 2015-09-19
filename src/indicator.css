@@ -1,0 +1,12 @@
+.indicator.basic>.title{
+  font-size: 2em;
+  border-right: 1px solid #cccccc;
+  padding-right: 10px;
+}
+.indicator.basic>div{
+  margin-left: 10px;
+  display: inline-block;
+}
+.indicator.basic .fa{
+  margin-right: 5px;
+}
