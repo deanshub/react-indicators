@@ -87,7 +87,7 @@ export class IndicatorItem extends Component {
 
   render() {
     return (
-      <div style={{color:this.state.color}} className="indicator-item" onClick={this.changeVal.bind(this)}>
+      <div style={{color:this.state.color}} className="indicator-item" onClick={this.props.increment?this.changeVal.bind(this):''}>
         {(this.props.icon)?(<i className={this.getIconClass()} />):''}
         <span>{this.state.title}</span><div ref="mainValue"></div> <span>{this.props.sign}</span>
       </div>

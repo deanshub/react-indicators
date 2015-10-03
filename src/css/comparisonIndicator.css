@@ -1,0 +1,41 @@
+.indicator.comparison>.seperator{
+  width: 100%;
+  height: 1px;
+  background-color: #cccccc;
+}
+.indicator.comparison>.comparison-container{
+  height: 100px;
+  display: flex;
+}
+.indicator.comparison>.comparison-container .title{
+  font-size: 3em;
+  display: table;
+  margin: 0 auto;
+  line-height: 200%;
+}
+
+.indicator.comparison .highBar{
+  display: flex;
+}
+.indicator.comparison .highBar .arrow-head{
+  border-top:50px solid transparent;
+  border-bottom:50px solid transparent;
+  border-right: 50px solid #00c0e4;
+}
+.indicator.comparison .highBar .arrow-body{
+  width: 100%;
+  background-color: #00c0e4;
+}
+
+.indicator.comparison .lowBar{
+  display: flex;
+}
+.indicator.comparison .lowBar .arrow-head{
+  border-top:50px solid transparent;
+  border-bottom:50px solid transparent;
+  border-left: 50px solid #fd625e;
+}
+.indicator.comparison .lowBar .arrow-body{
+  width: 100%;
+  background-color: #fd625e;
+}

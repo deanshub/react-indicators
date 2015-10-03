@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { NICE, SUPER_NICE } from './colors';
-import { Indicator } from './Indicator';
+// import { Indicator } from './Indicator';
+import { BasicIndicator } from './BasicIndicator';
+import { WeatherIndicator } from './WeatherIndicator';
+import { ComparisonIndicator } from './ComparisonIndicator';
+
 
 class Counter extends Component {
   constructor(props) {
@@ -30,11 +34,14 @@ class Counter extends Component {
 
         // <Counter increment={1} color={NICE} />
         // <Counter increment={5} color={SUPER_NICE} />
+        // <Indicator title="Total Sales"></Indicator>
 export class App extends Component {
   render() {
     return (
       <div>
-        <Indicator title="Total Sales"></Indicator>
+        <BasicIndicator title="Total Sales"/>
+        <WeatherIndicator title="WEATHER"/>
+        <ComparisonIndicator orientation="vertical" title="Total Sales" high={72} low={28} />
       </div>
     );
   }

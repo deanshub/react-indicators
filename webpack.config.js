@@ -39,5 +39,8 @@ module.exports = {
     },{
       test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&minetype=application/octet-stream'
+    },{
+      test: /\.png$/,
+      loader: 'url?limit=10000&minetype=image/png'
     },]}
 };
