@@ -18,3 +18,6 @@ Todos
 
 ### Comparison Indicator
 * vertical alignment
+
+### Svg Indicators
+* animation for value

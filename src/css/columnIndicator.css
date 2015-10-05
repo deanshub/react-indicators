@@ -1,0 +1,11 @@
+.indicator.column>.title{
+  font-size: 2em;
+  padding-right: 10px;
+  display: table;
+  margin: 0 auto;
+}
+.indicator.column>.seperator{
+  width: 100%;
+  height: 1px;
+  background-color: #cccccc;
+}
