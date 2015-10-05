@@ -25,7 +25,7 @@ export class Seperator extends Component {
   setStyle(){
     return {
       color:this.state.color,
-      'border-right': this.state.value==''?'1px solid #cccccc':'none'
+      borderRight: this.state.value==''?'1px solid #cccccc':'none'
     };
   }
 

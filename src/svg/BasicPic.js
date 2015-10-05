@@ -29,7 +29,7 @@ export class BasicPic extends Component {
     let x = 10 + ((widthHeight + 2) * (index % squeresInRow));
     let y = 10 + Math.floor(index / squeresInRow) * (widthHeight + 2);
     return (
-      <rect x={x} y={y} width={widthHeight} height={widthHeight} fill={this.state.color} opacity={empty?"0.3":"1"} />
+      <rect key={index} x={x} y={y} width={widthHeight} height={widthHeight} fill={this.state.color} opacity={empty?"0.3":"1"} />
     );
   }
 

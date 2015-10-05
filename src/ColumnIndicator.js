@@ -30,7 +30,7 @@ export class ColumnIndicator extends Component {
         <Title value={this.state.title}/>
         <Seperator/>
         <Title color="#fd625e" value="Max"/>
-        <SvgIndicatorPart name="column" type="basic" value={78}/>
+        <SvgIndicatorPart name="column" type="thermometer" value={78}/>
         <Title color="#fd625e" value="Min"/>
       </div>
     );
