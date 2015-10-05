@@ -20,16 +20,12 @@ export class PictogramIndicator extends Component {
 
   constructor(props) {
     super(props);
-    this.state={
-      title: this.props.title,
-      color: this.props.color,
-    };
   }
 
   render() {
     return (
       <div className="indicator pictogram">
-        <Title value={this.state.title}/>
+        <Title value={this.props.title}/>
         <Seperator/>
 
         <div className="desc-container">
@@ -38,8 +34,8 @@ export class PictogramIndicator extends Component {
           <Counter color="#00c0e4" value={102.8} prefix="" postfix="" />
         </div>
 
-        <SvgIndicatorPart name="pic" type="basic" color={this.state.color} value={78}/>
-        <Counter value={78} postfix="%" />
+        <SvgIndicatorPart name="pic" type="basic" color={this.props.color} value={this.props.value}/>
+        <Counter value={this.props.value} postfix="%" />
       </div>
     );
   }

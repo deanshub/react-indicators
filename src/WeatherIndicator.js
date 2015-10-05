@@ -19,19 +19,16 @@ export class WeatherIndicator extends Component {
 
   constructor(props) {
     super(props);
-    this.state={
-      title: this.props.title
-    };
   }
 
   render() {
     return (
       <div className="indicator weather">
-        <Title value={this.state.title}/>
+        <Title value={this.props.title}/>
         <Seperator/>
-        <Title value="Cloudy"/>
-        <Image name="wearther" type="cloudy" />
-        <Counter value={-4} postfix="°C" />
+        <Title value={this.props.type}/>
+        <Image name="wearther" type={this.props.type} />
+        <Counter color={this.props.color} value={this.props.value} postfix="°C" />
       </div>
     );
   }

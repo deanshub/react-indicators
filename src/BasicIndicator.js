@@ -5,9 +5,6 @@ import {Seperator} from './Seperator';
 import {Counter} from './Counter';
 import {Icon} from './Icon';
 
-
-// import {default} from 'font-awesome/css/font-awesome.css'
-
 /**
 <Title value=""/>
 <Seperator/>
@@ -19,57 +16,25 @@ import {Icon} from './Icon';
 **/
 export class BasicIndicator extends Component {
   static defaultProps = {
+    value: 0,
     title: '',
+    color: 'black',
   };
 
   constructor(props) {
     super(props);
-    this.state={
-      title: this.props.title
-    };
-      // items:[{
-      //   value: 450,
-      //   sign: 'M$',
-      // },{
-      //   title: '25%/102.8',
-      //   icon: 'thumb',
-      //   iconType: 'up',
-      //   color: '#00c0e4',
-      // },]
-
-    // this.state={
-    //   items:[{
-    //     value: 450,
-    //     sign: 'M$',
-    //     color: '#ffd633'
-    //   },{
-    //     title: '25%/102.8',
-    //     icon: 'thumb',
-    //     iconType: 'up',
-    //     color: '#fd625e',
-    //   },{
-    //     value: 450,
-    //     sign: 'M$',
-    //     color: '#00c0e4'
-    //   },{
-    //     iconType: 'down',
-    //     icon: 'chevron',
-    //     title: 'Lior is beautiful',
-    //     color: '#cccccc'
-    //   },]
-    // };
   }
 
   render() {
     return (
       <div className="indicator basic">
-        <Title value={this.state.title}/>
+        <Title value={this.props.title}/>
         <Seperator/>
-        <Counter value={450} postfix="M$" />
-        <Icon color="#00c0e4" name="thumb" type="down" />
-        <Counter color="#00c0e4" value={25} postfix="%" />
-        <Seperator color="#00c0e4" value="/"/>
-        <Counter color="#00c0e4" value={102.8} prefix="" postfix="" />
+        <Counter value={this.props.value} postfix="M$" />
+        <Icon color={this.props.color} name={this.props.iconName} type={this.props.iconType} />
+        <Counter color={this.props.color} value={25} postfix="%" />
+        <Seperator color={this.props.color} value="/"/>
+        <Counter color={this.props.color} value={102.8} prefix="" postfix="" />
       </div>
     );
   }

@@ -9,25 +9,16 @@ export class ThermometerColumn extends Component {
   };
   constructor(props) {
     super(props);
-    this.state={
-      value: this.props.value,
-    };
-  }
-
-  changeVal(newVal){
-    this.setState({
-      value: newVal
-    });
   }
 
   render(){
     return (
-      <svg onClick={this.changeVal.bind(this,this.state.value+2)} width="100" height="250" style={{margin:'auto', display:'block'}}>
+      <svg width="100" height="250" style={{margin:'auto', display:'block'}}>
         <defs>
           <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset={100-this.state.value + '%'} stopColor="#fd625e" stopOpacity={0.1} />
-            <stop offset={100-this.state.value + '%'} stopColor="#fd625e" stopOpacity={1} />
-            <stop offset={this.state.value + '%'} stopColor="#fd625e" stopOpacity={1} />
+            <stop offset={100-this.props.value + '%'} stopColor="#fd625e" stopOpacity={0.1} />
+            <stop offset={100-this.props.value + '%'} stopColor="#fd625e" stopOpacity={1} />
+            <stop offset={this.props.value + '%'} stopColor="#fd625e" stopOpacity={1} />
           </linearGradient>
         </defs>
 

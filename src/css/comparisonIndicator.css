@@ -7,6 +7,9 @@
   height: 100px;
   display: flex;
 }
+.indicator.comparison>.comparison-container>.seperator{
+  width: 20px;
+}
 .indicator.comparison>.comparison-container .title{
   font-size: 3em;
   display: table;

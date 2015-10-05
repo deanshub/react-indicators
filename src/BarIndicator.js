@@ -14,33 +14,30 @@ import {SvgIndicatorPart} from './SvgIndicatorPart';
 **/
 export class BarIndicator extends Component {
   static defaultProps = {
+    value:0,
     title: '',
     color: 'black',
   };
 
   constructor(props) {
     super(props);
-    this.state={
-      title: this.props.title,
-      color: this.props.color,
-    };
   }
 
   render() {
     return (
       <div className="indicator bar">
-        <Title value={this.state.title}/>
+        <Title value={this.props.title}/>
         <Seperator/>
         <div className="main-container">
           <div className="bar-container">
-            <SvgIndicatorPart name="bar" type="basic" color={this.state.color} value={78}/>
+            <SvgIndicatorPart name="bar" type="basic" color={this.props.color} value={this.props.value}/>
             <div className="svg-description">
-              <Title value="Min" color={this.state.color} />
-              <Title value="Max" color={this.state.color} />
+              <Title value="Min" color={this.props.color} />
+              <Title value="Max" color={this.props.color} />
             </div>
           </div>
           <div className="desc-container">
-            <Counter value={78} postfix="%" />
+            <Counter value={this.props.value} postfix="%" />
             <Title value="Growth"/>
           </div>
         </div>

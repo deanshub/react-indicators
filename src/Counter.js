@@ -19,8 +19,6 @@ export class Counter extends Component {
     super(props);
     this.state={
       value: this.props.value,
-      prefix: this.props.prefix,
-      postfix: this.props.postfix,
       color: this.props.color,
     };
   }
@@ -32,6 +30,10 @@ export class Counter extends Component {
           value:this.state.value,
       });
     }
+  }
+
+  componentWillReceiveProps(nextProps){
+    this.setState(nextProps);
   }
 
   componentDidUpdate() {
@@ -47,9 +49,9 @@ export class Counter extends Component {
   render(){
     return (
       <div style={{color:this.state.color}} className="counter" onClick={this.changeVal.bind(this, this.state.value+5)}>
-        {this.state.prefix}
+        {this.props.prefix}
         <span ref="value">{this.state.value}</span>
-        {this.state.postfix}
+        {this.props.postfix}
       </div>
     );
   }

@@ -9,22 +9,13 @@ export class BasicGauge extends Component {
     value: 0,
     color: 'black',
   };
+
   constructor(props) {
     super(props);
-    this.state={
-      value: this.props.value,
-      color: this.props.color,
-    };
-  }
-
-  changeVal(newVal){
-    this.setState({
-      value: newVal
-    });
   }
 
   calcPath(radius){
-    let angleFromVal = this.state.value * 3.6;
+    let angleFromVal = this.props.value * 3.6;
     let cx=110,cy=100;
     let startAngle=0,
       endAngle=angleFromVal-90;
@@ -43,11 +34,11 @@ export class BasicGauge extends Component {
 
   render(){
     return (
-      <svg onClick={this.changeVal.bind(this,this.state.value+2)} width="220" height="200">
+      <svg width="220" height="200">
         <path d={this.calcPath(90)} fill="#cccccc" />
         <circle cx="110" cy="100" r="83" fill="white" />
-        <circle cx="110" cy="100" r="80" fill={this.state.color} opacity="0.3" />
-        <path d={this.calcPath(80)} fill={this.state.color}/>
+        <circle cx="110" cy="100" r="80" fill={this.props.color} opacity="0.3" />
+        <path d={this.calcPath(80)} fill={this.props.color}/>
       </svg>
     );
   }

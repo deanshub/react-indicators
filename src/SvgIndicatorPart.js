@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import {svgsStore} from './svgsStore';
-import {BasicColumn} from './svg/BasicColumn';
 
 export class SvgIndicatorPart extends Component {
   static propTypes = {
@@ -16,25 +15,13 @@ export class SvgIndicatorPart extends Component {
   };
   constructor(props) {
     super(props);
-    this.state={
-      name: this.props.name,
-      type: this.props.type,
-      value: this.props.value,
-      color: this.props.color,
-    };
-  }
-
-  changeVal(newVal){
-    this.setState({
-      name: newVal
-    });
   }
 
   getSvg(props){
-    return svgsStore[this.state.name][this.state.type](props);
+    return svgsStore[this.props.name][this.props.type](props);
   }
 
   render(){
-    return this.getSvg({value:this.state.value, color:this.state.color});
+    return this.getSvg({value:this.props.value, color:this.props.color});
   }
 }

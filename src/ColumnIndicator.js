@@ -15,23 +15,22 @@ import {SvgIndicatorPart} from './SvgIndicatorPart';
 export class ColumnIndicator extends Component {
   static defaultProps = {
     title: '',
+    type: 'basic',
+    color: 'black'
   };
 
   constructor(props) {
     super(props);
-    this.state={
-      title: this.props.title
-    };
   }
 
   render() {
     return (
       <div className="indicator column">
-        <Title value={this.state.title}/>
+        <Title value={this.props.title}/>
         <Seperator/>
-        <Title color="#fd625e" value="Max"/>
-        <SvgIndicatorPart name="column" type="thermometer" value={78}/>
-        <Title color="#fd625e" value="Min"/>
+        <Title color={this.props.color} value="Max"/>
+        <SvgIndicatorPart name="column" type={this.props.type} value={this.props.value} color={this.props.color}/>
+        <Title color={this.props.color} value="Min"/>
       </div>
     );
   }

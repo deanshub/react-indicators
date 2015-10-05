@@ -11,22 +11,12 @@ export class Image extends Component {
   };
   constructor(props) {
     super(props);
-    this.state={
-      name: this.props.name,
-      type: this.props.type,
-    };
-  }
-
-  changeVal(newVal){
-    this.setState({
-      name: newVal
-    });
   }
 
   getImage(){
-    switch (this.state.name){
+    switch (this.props.name){
       case 'wearther':
-        switch (this.state.type){
+        switch (this.props.type){
           case 'cloudy':
             return imagesStore.cloudy;
             break;

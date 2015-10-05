@@ -11,16 +11,6 @@ export class BasicPic extends Component {
   };
   constructor(props) {
     super(props);
-    this.state={
-      value: this.props.value,
-      color: this.props.color,
-    };
-  }
-
-  changeVal(newVal){
-    this.setState({
-      value: newVal
-    });
   }
 
   generateSquere(index, empty){
@@ -29,13 +19,13 @@ export class BasicPic extends Component {
     let x = 10 + ((widthHeight + 2) * (index % squeresInRow));
     let y = 10 + Math.floor(index / squeresInRow) * (widthHeight + 2);
     return (
-      <rect key={index} x={x} y={y} width={widthHeight} height={widthHeight} fill={this.state.color} opacity={empty?"0.3":"1"} />
+      <rect key={index} x={x} y={y} width={widthHeight} height={widthHeight} fill={this.props.color} opacity={empty?"0.3":"1"} />
     );
   }
 
   generateTable(length){
     let arr = Array.apply(null, Array(length));
-    let squeresValue = (length / 100) * this.state.value;
+    let squeresValue = (length / 100) * this.props.value;
     let squeresLeft = length - squeresValue;
 
     return arr.map((o,index)=>{
@@ -45,7 +35,7 @@ export class BasicPic extends Component {
 
   render(){
     return (
-      <svg onClick={this.changeVal.bind(this,this.state.value+2)} width="220" height="200">
+      <svg width="220" height="200">
         { this.generateTable(100) }
       </svg>
     );
