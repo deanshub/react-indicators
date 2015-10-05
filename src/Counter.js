@@ -41,9 +41,9 @@ export class Counter extends Component {
   }
 
   changeVal(newVal){
-    this.setState({
-      value: newVal
-    });
+    // this.setState({
+    //   value: newVal
+    // });
   }
 
   render(){

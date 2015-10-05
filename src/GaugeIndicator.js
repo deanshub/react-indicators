@@ -29,9 +29,9 @@ export class GaugeIndicator extends Component {
         <Seperator/>
 
         <div className="desc-container">
-          <Counter color="#00c0e4" value={25} postfix="%" />
-          <Seperator color="#00c0e4" value="/"/>
-          <Counter color="#00c0e4" value={102.8} prefix="" postfix="" />
+          <Counter color={this.props.color} value={25} postfix="%" />
+          <Seperator color={this.props.color} value="/"/>
+          <Counter color={this.props.color} value={102.8} prefix="" postfix="" />
         </div>
 
         <SvgIndicatorPart name="gauge" type="basic" color={this.props.color} value={this.props.value}/>

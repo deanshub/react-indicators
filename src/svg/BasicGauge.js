@@ -22,7 +22,7 @@ export class BasicGauge extends Component {
 
     let x1=cx;
     let y1=cy-radius;
-    let inside=angleFromVal%360>180?"1":"0";
+    let inside=((angleFromVal===360)||(angleFromVal%360>180))?"1":"0";
     // let x2 = parseInt(110 + radius*Math.cos(Math.PI*startAngle/180));
     // let y2 = parseInt(100 + radius*Math.sin(Math.PI*startAngle/180));
 

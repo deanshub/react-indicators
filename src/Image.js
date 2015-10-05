@@ -19,23 +19,16 @@ export class Image extends Component {
         switch (this.props.type){
           case 'cloudy':
             return imagesStore.cloudy;
-            break;
           case 'rain':
-            return ;
-            break;
+            return imagesStore.rain ;
           case 'snow':
-              return ;
-              break;
+            return imagesStore.snow ;
           case 'lightning':
-              return ;
-              break;
+            return imagesStore.lightning ;
           case 'sunny':
-              return ;
-              break;
+            return imagesStore.sunny ;
           case 'partly cloudy':
-              return ;
-              break;
-        break;
+            return imagesStore.partlyCloudy ;
       default:
         return '';
       }

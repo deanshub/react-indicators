@@ -9,13 +9,6 @@ import { BarIndicator } from './BarIndicator';
 import { PictogramIndicator } from './PictogramIndicator';
 import { GaugeIndicator } from './GaugeIndicator';
 
-/**
-<Title value=""/>
-<Seperator/>
-<Title value=""/>
-<SvgIndicatorPart name="" type=""/>
-<Title value=""/>
-**/
 export class IndicatorPanel extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +22,14 @@ export class IndicatorPanel extends Component {
       iconType: 'down',
       typesAvailable:{
         basic:['basic'],
-        weather:['cloudy'],
+        weather:[
+          'cloudy',
+          'rain',
+          'snow',
+          'lightning',
+          'sunny',
+          'partly cloudy',
+        ],
         comparison:['basic'],
         column:['basic','thermometer'],
         bar:['basic'],
@@ -53,6 +53,8 @@ export class IndicatorPanel extends Component {
     this.setState({
       type: indType,
       subType: this.state.typesAvailable[indType][0],
+      iconName: this.state.iconName?this.state.iconName:this.state.iconsAvailable[0],
+      iconType: this.state.iconType?this.state.iconType:'down',
     });
   }
 
