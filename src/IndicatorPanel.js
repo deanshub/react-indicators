@@ -1,13 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 // import styles from './css/columnIndicator.css';
 
-import { BasicIndicator } from './BasicIndicator';
-import { WeatherIndicator } from './WeatherIndicator';
-import { ComparisonIndicator } from './ComparisonIndicator';
-import { ColumnIndicator } from './ColumnIndicator';
-import { BarIndicator } from './BarIndicator';
-import { PictogramIndicator } from './PictogramIndicator';
-import { GaugeIndicator } from './GaugeIndicator';
+import { UltimateIndicator } from './UltimateIndicator';
 
 export class IndicatorPanel extends Component {
   constructor(props) {
@@ -76,69 +70,6 @@ export class IndicatorPanel extends Component {
     });
   }
 
-  getIndicator(){
-    let {subType, ...others} = this.state;
-    switch (this.state.type) {
-      case 'basic':
-        switch (this.state.subType) {
-          case 'basic':
-            return (
-              <BasicIndicator {...this.state}/>
-            );
-            break;
-        }
-        break;
-      case 'weather':
-        return (
-          <WeatherIndicator {...others} type={subType}/>
-        );
-        break;
-      case 'comparison':
-        switch (this.state.subType) {
-          case 'basic':
-            return (
-              <ComparisonIndicator orientation="vertical" high={this.state.value} low={100-this.state.value} {...this.state}/>
-            );
-            break;
-        }
-        break;
-      case 'column':
-          return (
-            <ColumnIndicator {...others} type={subType}/>
-          );
-        break;
-      case 'bar':
-        switch (this.state.subType) {
-          case 'basic':
-            return (
-              <BarIndicator {...this.state}/>
-            );
-            break;
-        }
-        break;
-      case 'pictogram':
-        switch (this.state.subType) {
-          case 'basic':
-            return (
-              <PictogramIndicator {...this.state}/>
-            );
-            break;
-        }
-        break;
-      case 'gauge':
-        switch (this.state.subType) {
-          case 'basic':
-            return (
-              <GaugeIndicator {...this.state}/>
-            );
-            break;
-        }
-        break;
-      default:
-        return null;
-    }
-  }
-
   renderIconSelection(){
     if (this.state.type==='basic'){
       return (
@@ -148,7 +79,7 @@ export class IndicatorPanel extends Component {
           <select ref="iconName" defaultValue={this.state.iconName}>
             {
               this.state.iconsAvailable.map((iconName)=>(
-                <option value={iconName}>{iconName}</option>
+                <option key={iconName} value={iconName}>{iconName}</option>
               ))
             }
           </select>
@@ -170,7 +101,7 @@ export class IndicatorPanel extends Component {
         <select ref="type" defaultValue={this.state.type} onChange={this.handleTypeChange.bind(this)}>
           {
             Object.keys(this.state.typesAvailable).map((type)=>(
-              <option value={type}>{type}</option>
+              <option key={type} value={type}>{type}</option>
             ))
           }
         </select>
@@ -179,7 +110,7 @@ export class IndicatorPanel extends Component {
         <select ref="subType" defaultValue={this.state.subType} onChange={this.handleSubTypeChange.bind(this)}>
           {
             this.state.typesAvailable[this.state.type].map((subType)=>(
-              <option value={subType}>{subType}</option>
+              <option key={subType} value={subType}>{subType}</option>
             ))
           }
         </select>
@@ -198,9 +129,7 @@ export class IndicatorPanel extends Component {
         {'  '}
         <button onClick={this.changeIndicator.bind(this)}>Set</button>
         <hr/>
-        {
-          this.getIndicator()
-        }
+        <UltimateIndicator {...this.state} />
       </div>
     );
   }

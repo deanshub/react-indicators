@@ -51,7 +51,7 @@
     "font-awesome": "^4.4.0",
     "jquery": "^2.1.4",
     "odometer": "^0.4.7",
-    "react": "^0.13.0",
+    "react": "^0.14.3",
     "style-loader": "^0.12.4"
   }
 }
