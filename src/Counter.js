@@ -26,7 +26,7 @@ export class Counter extends Component {
   componentDidMount(){
     if(this.state.value){
       this.odometer = new Odometer({
-          el:React.findDOMNode(this.refs.value),
+          el:this.refs.value,
           value:this.state.value,
       });
     }

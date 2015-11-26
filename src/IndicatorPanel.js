@@ -43,7 +43,7 @@ export class IndicatorPanel extends Component {
   }
 
   handleTypeChange(){
-    let indType=React.findDOMNode(this.refs.type).value;
+    let indType=this.refs.type.value;
     this.setState({
       type: indType,
       subType: this.state.typesAvailable[indType][0],
@@ -54,19 +54,19 @@ export class IndicatorPanel extends Component {
 
   handleSubTypeChange(){
     this.setState({
-      subType: React.findDOMNode(this.refs.subType).value,
+      subType: this.refs.subType.value,
     });
   }
 
   changeIndicator(){
     this.setState({
-      type: React.findDOMNode(this.refs.type).value,
-      subType: React.findDOMNode(this.refs.subType).value,
-      color: React.findDOMNode(this.refs.color).value,
-      value: parseInt(React.findDOMNode(this.refs.val).value),
-      title: React.findDOMNode(this.refs.title).value,
-      iconName: React.findDOMNode(this.refs.iconName)?React.findDOMNode(this.refs.iconName).value:'',
-      iconType: React.findDOMNode(this.refs.iconType)?React.findDOMNode(this.refs.iconType).value:'',
+      type: this.refs.type.value,
+      subType: this.refs.subType.value,
+      color: this.refs.color.value,
+      value: parseInt(this.refs.val).value,
+      title: this.refs.title.value,
+      iconName: this.refs.iconName?this.refs.iconName.value:'',
+      iconType: this.refs.iconType?this.refs.iconType.value:'',
     });
   }
 

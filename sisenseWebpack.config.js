@@ -4,8 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'eval',
   entry: [
-    'webpack-hot-middleware/client',
-    './src/index'
+    './src/sisenseIndex'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -13,8 +12,6 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
     new webpack.ProvidePlugin({
         $: "jquery"
     }),
