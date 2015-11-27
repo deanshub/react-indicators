@@ -7,7 +7,7 @@ export class IndicatorPanel extends Component {
   constructor(props) {
     super(props);
     this.state={
-      type: 'gauge',
+      type: 'column',
       subType: 'basic',
       value: 78,
       title: 'Total Sales',
@@ -122,7 +122,7 @@ export class IndicatorPanel extends Component {
         <input ref="title" type="text" defaultValue={this.state.title} />
         {'  '}
         <span>Value:</span>
-        <input ref="val" type="text" defaultValue={this.state.value} />
+        <input ref="val" type="text" onChange={this.changeIndicator.bind(this)} defaultValue={this.state.value} />
         {'  '}
         <span>Color:</span>
         <input ref="color" type="text" defaultValue={this.state.color} />
