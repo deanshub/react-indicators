@@ -34,8 +34,7 @@ export class BasicGauge extends Component {
 
   render(){
     return (
-      <svg width="220" height="200">
-        <path d={this.calcPath(90)} fill="#cccccc" />
+      <svg width="100%" height="70%">
         <circle cx="110" cy="100" r="83" fill="white" />
         <circle cx="110" cy="100" r="80" fill={this.props.color} opacity="0.3" />
         <path d={this.calcPath(80)} fill={this.props.color}/>

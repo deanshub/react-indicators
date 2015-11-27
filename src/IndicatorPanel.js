@@ -7,7 +7,7 @@ export class IndicatorPanel extends Component {
   constructor(props) {
     super(props);
     this.state={
-      type: 'basic',
+      type: 'gauge',
       subType: 'basic',
       value: 78,
       title: 'Total Sales',
@@ -63,7 +63,7 @@ export class IndicatorPanel extends Component {
       type: this.refs.type.value,
       subType: this.refs.subType.value,
       color: this.refs.color.value,
-      value: parseInt(this.refs.val).value,
+      value: parseInt(this.refs.val.value),
       title: this.refs.title.value,
       iconName: this.refs.iconName?this.refs.iconName.value:'',
       iconType: this.refs.iconType?this.refs.iconType.value:'',

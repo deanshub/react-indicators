@@ -1,33 +1,33 @@
-.indicator.comparison>.seperator{
-  width: 100%;
-  height: 1px;
-  background-color: #cccccc;
+.indicator.comparison{
+  margin: 15px;
 }
 .indicator.comparison>.comparison-container{
   height: 100px;
   display: flex;
 }
-.indicator.comparison>.comparison-container>.seperator{
-  width: 20px;
-}
-.indicator.comparison>.comparison-container .title{
-  font-size: 3em;
-  display: table;
-  margin: 0 auto;
-  line-height: 200%;
+.indicator.comparison>.title{
+  font-size: 2em;
 }
 
+.indicator.comparison>.values-container{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 3em;
+  margin-right: 3%;
+}
+.indicator.comparison>.values-container>.seperator{
+  margin: 5px;
+}
 .indicator.comparison .highBar{
   display: flex;
 }
 .indicator.comparison .highBar .arrow-head{
   border-top:50px solid transparent;
   border-bottom:50px solid transparent;
-  border-right: 50px solid #00c0e4;
+  border-right: 50px solid transparent;
 }
 .indicator.comparison .highBar .arrow-body{
   width: 100%;
-  background-color: #00c0e4;
 }
 
 .indicator.comparison .lowBar{

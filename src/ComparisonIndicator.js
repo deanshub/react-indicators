@@ -37,23 +37,22 @@ export class ComparisonIndicator extends Component {
   render() {
     return (
       <div className="indicator comparison">
-        <Title value={this.props.title}/>
-        <Seperator/>
+        <div className="values-container">
+          <Title color={this.props.color} value={this.props.high + '%'}/>
+          <Seperator/>
+          <Title color="#fd625e" value={this.props.low  + '%'}/>
+        </div>
         <div className="comparison-container">
           <div className="highBar" style={this.getBarStyle('high')}>
-            <div className="arrow-head" />
-            <div className="arrow-body">
-              <Title color="white" value={this.props.high + '%'}/>
-            </div>
+            <div className="arrow-head" style={{borderRightColor:this.props.color}} />
+            <div className="arrow-body" style={{backgroundColor:this.props.color}} />
           </div>
-          <Seperator />
           <div className="lowBar" style={this.getBarStyle('low')}>
-            <div className="arrow-body">
-              <Title color="white" value={this.props.low  + '%'}/>
-            </div>
+            <div className="arrow-body" />
             <div className="arrow-head" />
           </div>
         </div>
+        <Title value={this.props.title}/>
       </div>
     );
   }

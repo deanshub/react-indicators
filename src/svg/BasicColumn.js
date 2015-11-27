@@ -15,7 +15,7 @@ export class BasicColumn extends Component {
 
   render(){
     return (
-      <svg width="100" height="250" style={{margin:'auto', display:'block'}}>
+      <svg width="100%" height="90%" style={{margin:'auto', display:'block'}}>
         <defs>
           <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset={100-this.props.value + '%'} stopColor={this.props.color} stopOpacity={0.1} />
@@ -23,8 +23,8 @@ export class BasicColumn extends Component {
             <stop offset={this.props.value + '%'} stopColor={this.props.color} stopOpacity={1} />
           </linearGradient>
         </defs>
-        <rect x="0" y="0" width="100" height="250" fill="url(#grad1)" />
-        <text x="15" y="125" width="100" height="250" fill="white" fontSize="2em">{this.props.value + '%'}</text>
+        <rect x="47.5%" width="5%" height="80%" fill="url(#grad1)" />
+        <text textAnchor="middle" x="50%" y="90%" width="100%" height="20%" fill={this.props.color} fontSize="2em">{this.props.value}</text>
       </svg>
     );
   }
