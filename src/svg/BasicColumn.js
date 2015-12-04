@@ -67,7 +67,7 @@ export class BasicColumn extends Component {
       <g>
         <rect x="46%" y="5%" width="8%" height="80%" fill="url(#grad1)" />
         {arr.map(function(item,index){
-          let shouldBeOpacitated = item > Math.floor(this.state.value);
+          let shouldBeOpacitated = Math.floor(item) > Math.floor(this.state.value);
           let currentY = 5 + (index * 96/times);
           return (
             <g key={index}>
@@ -82,8 +82,7 @@ export class BasicColumn extends Component {
 
   render(){
     let range = this.props.maximum - this.props.minimum;
-    let scale = range/100;
-    let scaledValue = this.state.value/scale;
+    let scaledValue = 100* (this.state.value - this.props.minimum) / range;
     return (
       <svg width="100%" height="90%" style={{margin:'auto', display:'block'}}>
         <defs>
