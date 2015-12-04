@@ -22,6 +22,6 @@ export class SvgIndicatorPart extends Component {
   }
 
   render(){
-    return this.getSvg({value:this.props.value, color:this.props.color});
+    return this.getSvg({value:this.props.value, color:this.props.color, minimum:this.props.minimum, maximum:this.props.maximum});
   }
 }

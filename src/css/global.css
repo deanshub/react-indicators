@@ -1,0 +1,7 @@
+@font-face {
+  src: url(../fonts/Abel-Regular.ttf);
+  font-family: abel;
+}
+.indicator{
+  font-family: abel
+}

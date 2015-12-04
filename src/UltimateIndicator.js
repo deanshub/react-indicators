@@ -18,6 +18,8 @@ export class UltimateIndicator extends Component {
     color: '#00c0e4',
     iconName: 'thumb',
     iconType: 'down',
+    maximum:100,
+    minimum:0,
   };
 
   constructor(props) {

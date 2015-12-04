@@ -9,6 +9,8 @@ export class IndicatorPanel extends Component {
     this.state={
       type: 'column',
       subType: 'basic',
+      minimum:0,
+      maximum:100,
       value: 78,
       title: 'Total Sales',
       color: '#00c0e4',
@@ -64,6 +66,8 @@ export class IndicatorPanel extends Component {
       subType: this.refs.subType.value,
       color: this.refs.color.value,
       value: parseInt(this.refs.val.value),
+      minimum: parseInt(this.refs.minimum.value),
+      maximum: parseInt(this.refs.maximum.value),
       title: this.refs.title.value,
       iconName: this.refs.iconName?this.refs.iconName.value:'',
       iconType: this.refs.iconType?this.refs.iconType.value:'',
@@ -122,14 +126,22 @@ export class IndicatorPanel extends Component {
         <input ref="title" type="text" defaultValue={this.state.title} />
         {'  '}
         <span>Value:</span>
-        <input ref="val" type="text" onChange={this.changeIndicator.bind(this)} defaultValue={this.state.value} />
+        <input ref="val" type="number" onChange={this.changeIndicator.bind(this)} defaultValue={this.state.value} />
         {'  '}
         <span>Color:</span>
-        <input ref="color" type="text" defaultValue={this.state.color} />
+        <input ref="color" type="color" defaultValue={this.state.color} />
+        {'  '}
+        <span>Minimum:</span>
+        <input ref="minimum" type="number" defaultValue={this.state.minimum} />
+        {'  '}
+        <span>Maximum:</span>
+        <input ref="maximum" type="number" defaultValue={this.state.maximum} />
         {'  '}
         <button onClick={this.changeIndicator.bind(this)}>Set</button>
         <hr/>
-        <UltimateIndicator {...this.state} />
+        <div style={{height:'450px', border:'black 1px solid'}}>
+          <UltimateIndicator {...this.state} />
+        </div>
       </div>
     );
   }

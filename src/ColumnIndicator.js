@@ -19,15 +19,11 @@ export class ColumnIndicator extends Component {
     color: 'black'
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="indicator column">
         <Title value={this.props.title}/>
-        <SvgIndicatorPart name="column" type={this.props.type} value={this.props.value} color={this.props.color}/>
+        <SvgIndicatorPart name="column" {...this.props}/>
       </div>
     );
   }
