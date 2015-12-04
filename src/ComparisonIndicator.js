@@ -14,6 +14,7 @@ export class ComparisonIndicator extends Component {
   };
   static defaultProps = {
     title: '',
+    seconderyColor:'rgba(253, 98, 94,1)',
   };
 
   constructor(props) {
@@ -48,8 +49,8 @@ export class ComparisonIndicator extends Component {
             <div className="arrow-body" style={{backgroundColor:this.props.color}} />
           </div>
           <div className="lowBar" style={this.getBarStyle('low')}>
-            <div className="arrow-body" />
-            <div className="arrow-head" />
+            <div className="arrow-body" style={{backgroundColor:this.props.seconderyColor}} />
+            <div className="arrow-head" style={{borderLeftColor:this.props.seconderyColor}} />
           </div>
         </div>
         <Title value={this.props.title}/>

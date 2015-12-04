@@ -7,7 +7,7 @@ export class IndicatorPanel extends Component {
   constructor(props) {
     super(props);
     this.state={
-      type: 'column',
+      type: 'comparison',
       subType: 'basic',
       minimum:0,
       maximum:100,

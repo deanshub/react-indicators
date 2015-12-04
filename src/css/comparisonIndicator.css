@@ -1,5 +1,5 @@
 .indicator.comparison{
-  margin: 15px;
+  margin: 15px 40px;
 }
 .indicator.comparison>.comparison-container{
   height: 100px;
@@ -7,6 +7,7 @@
 }
 .indicator.comparison>.title{
   font-size: 2em;
+  margin-left: 50px;
 }
 
 .indicator.comparison>.values-container{
@@ -36,9 +37,8 @@
 .indicator.comparison .lowBar .arrow-head{
   border-top:50px solid transparent;
   border-bottom:50px solid transparent;
-  border-left: 50px solid #fd625e;
+  border-left: 50px solid transparent;
 }
 .indicator.comparison .lowBar .arrow-body{
   width: 100%;
-  background-color: #fd625e;
 }
