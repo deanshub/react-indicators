@@ -32,23 +32,18 @@ module.exports = {
       loaders:['style-loader', 'css-loader']
     },{
       test: /\.woff2?(\?v=\d+\.\d+\.\d+)?$/,
-      // loader: 'url?limit=10000&minetype=application/font-woff'
-      loader: 'url?minetype=application/font-woff'
+      loader: 'url?limit=10000&minetype=application/font-woff'
     },{
       test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-      // loader: 'file'
-      loader: 'url?minetype=application/font-eot'
+      loader: 'url?limit=10000&minetype=application/font-eot'
     },{
       test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-      // loader: 'url?limit=10000&minetype=image/svg+xml'
-      loader: 'url?minetype=image/svg+xml'
+      loader: 'url?limit=10000&minetype=image/svg+xml'
     },{
       test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      // loader: 'url?limit=10000&minetype=application/octet-stream'
-      loader: 'url?minetype=application/octet-stream'
+      loader: 'url?limit=10000&minetype=application/octet-stream'
     },{
       test: /\.png$/,
-      // loader: 'url?limit=10000&minetype=image/png'
-      loader: 'url?minetype=image/png'
+      loader: 'url?limit=10000&minetype=image/png'
     },]}
 };
