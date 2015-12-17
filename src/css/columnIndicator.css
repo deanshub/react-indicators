@@ -1,3 +1,6 @@
+.indicator.column{
+  height: 100%;
+}
 .indicator.column>.title{
   font-size: 2em;
   padding-right: 10px;
