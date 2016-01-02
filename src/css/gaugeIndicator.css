@@ -2,14 +2,19 @@
   font-size: 2em;
   padding-right: 10px;
   display: table;
-  margin: 0 auto;
+  margin: 5px auto;
 }
-.indicator.gauge>.seperator:nth-child(2){
-  width: 100%;
-  height: 1px;
-  background-color: #cccccc;
+.indicator.gauge>.counter{
+  font-size: 1.5em;
+  text-align: center;
+  font-family: ubuntu-light;
+  margin: 5px auto;
+}
+.indicator.gauge>svg{
+  margin: 5px auto;
 }
 .indicator.gauge .desc-container{
+  margin: 5px auto;
   font-family: ubuntu-light;
 }
 .indicator.gauge .desc-container>*{
@@ -18,9 +23,4 @@
 .indicator.gauge .desc-container>.seperator{
   margin-left: 5px;
   margin-right: 5px;
-}
-.indicator.gauge>.counter{
-  font-size: 1.5em;
-  text-align: center;
-  font-family: ubuntu-light;
 }
