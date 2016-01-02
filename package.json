@@ -1,61 +1,55 @@
 {
-  "name": "react-transform-boilerplate",
-  "version": "0.1.0",
-  "description": "A new Webpack boilerplate with hot reloading React components, and error handling on module and component level.",
+  "name": "react-indicators",
+  "version": "1.0.0",
+  "description": "React Indicators for beutifull display of simple data.",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-transform-boilerplate.git"
+    "url": "https://github.com/deanshub/react-indicators"
   },
   "keywords": [
     "react",
     "reactjs",
-    "boilerplate",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack",
-    "babel",
-    "react-transform"
+    "Indicators",
+    "data",
+    "visulization"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
-  "license": "CC0",
+  "author": "Dean Shub <dean.shub@sisense.com> (http://github.com/deanshub)",
+  "license": "Sisense",
   "bugs": {
-    "url": "https://github.com/gaearon/react-transform-boilerplate/issues"
+    "url": "https://github.com/deanshub/react-indicators/issues"
   },
-  "homepage": "https://github.com/gaearon/react-transform-boilerplate",
+  "homepage": "https://github.com/deanshub/react-indicators",
   "devDependencies": {
-    "babel-core": "^6.3.13",
+    "babel-core": "^6.3.26",
     "babel-eslint": "^4.1.6",
     "babel-loader": "^6.2.0",
-    "babel-plugin-react-transform": "^1.1.1",
+    "babel-plugin-react-transform": "^2.0.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
-    "css-loader": "^0.18.0",
-    "eslint": "^1.3.1",
-    "eslint-plugin-react": "^3.11.2",
+    "css-loader": "^0.23.1",
+    "eslint": "*",
+    "eslint-plugin-react": "^3.13.1",
     "express": "^4.13.3",
-    "file-loader": "^0.8.4",
-    "react-transform-catch-errors": "^0.1.1",
-    "react-transform-webpack-hmr": "^0.1.2",
-    "redbox-react": "^1.0.1",
-    "url-loader": "^0.5.6",
-    "webpack": "^1.9.6",
-    "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.0.0"
+    "file-loader": "^0.8.5",
+    "react-transform-catch-errors": "*",
+    "react-transform-webpack-hmr": "^0.1.6",
+    "redbox-react": "^1.2.0",
+    "url-loader": "^0.5.7",
+    "webpack": "*",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
-    "font-awesome": "^4.4.0",
+    "font-awesome": "^4.5.0",
     "jquery": "^2.1.4",
     "odometer": "^0.4.7",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "style-loader": "^0.12.4"
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "style-loader": "^0.13.0"
   }
 }

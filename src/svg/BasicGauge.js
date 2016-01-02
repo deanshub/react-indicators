@@ -16,12 +16,12 @@ export class BasicGauge extends Component {
 
   calcPath(radius){
     let angleFromVal = this.props.value * 3.6;
-    let cx=370,cy=100;
+    let cx=radius,cy=radius;
     let startAngle=0,
       endAngle=angleFromVal-90;
 
-    let fullCircle = angleFromVal%360===0;
-    if (angleFromVal===0){
+    let fullCircle = angleFromVal>=360;
+    if (angleFromVal<=0){
     }else if (fullCircle){
       return (
         <circle cx={cx} cy={cy} r={radius} fill={this.props.color} />
@@ -39,11 +39,13 @@ export class BasicGauge extends Component {
     }
   }
 
+  // x,y=50% r=10%
   render(){
+    var radius = 50;
     return (
-      <svg width="100%" height="70%">
-        <circle cx="50%" cy="50%" r="10%" fill={this.props.color} opacity="0.3" />
-        {this.calcPath(80)}
+      <svg width="100%" height="70%" viewBox="0 0 100 100">
+        <circle cx={radius} cy={radius} r={radius} fill={this.props.color} opacity="0.3" />
+        {this.calcPath(radius)}
       </svg>
     );
   }

@@ -16,7 +16,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.ProvidePlugin({
-        $: "jquery"
+        $: 'jquery'
     }),
   ],
   module: {
