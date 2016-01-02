@@ -1,0 +1,16 @@
+componentize animations
+responsive sizes
+  flexbox\ media queries
+design panel
+
+complete zur's designs
+  needle gauge indicator
+  half gauge indicator
+  small bar indicator
+  
+complete lihi's designs
+  weather indicators
+  animation indicator
+  thermometer indicator
+  coin bar indicator
+  coin pictogram indicator

@@ -7,8 +7,8 @@ export class IndicatorPanel extends Component {
   constructor(props) {
     super(props);
     this.state={
-      type: 'basic',
-      subType: 'basic',
+      type: 'column',
+      subType: 'thermometer',
       minimum:0,
       maximum:100,
       value: 78,
