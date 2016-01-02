@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-// import styles from './css/columnIndicator.css';
+import styles from './css/global.css';
 
 import { BasicIndicator } from './BasicIndicator';
 import { WeatherIndicator } from './WeatherIndicator';

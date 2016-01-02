@@ -2,6 +2,11 @@
   src: url(../fonts/Abel-Regular.ttf);
   font-family: abel;
 }
+@font-face {
+  src: url(../fonts/Ubuntu-L.ttf);
+  font-family: ubuntu-light;
+}
+
 .indicator{
-  font-family: abel
+  font-family: abel;
 }
