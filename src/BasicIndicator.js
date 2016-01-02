@@ -30,11 +30,14 @@ export class BasicIndicator extends Component {
       <div className="indicator basic">
         <Title value={this.props.title}/>
         <Seperator/>
-        <Counter value={this.props.value} postfix="M$" />
-        <Icon color={this.props.color} name={this.props.iconName} type={this.props.iconType} />
-        <Counter color={this.props.color} value={25} postfix="%" />
-        <Seperator color={this.props.color} value="/"/>
-        <Counter color={this.props.color} value={102.8} prefix="" postfix="" />
+        <Counter color={this.props.color} value={this.props.value} postfix="M$" />
+        <Seperator/>
+        <div className="secondery">
+          <Icon color="#d0d0d0" name={this.props.iconName} type={this.props.iconType} />
+          <Counter color="#d0d0d0" value={25} postfix="%" />
+          <Seperator color="#d0d0d0" value="/"/>
+          <Counter color="#d0d0d0" value={102.8} prefix="" postfix="" />
+        </div>
       </div>
     );
   }

@@ -10,10 +10,6 @@ export class BasicGauge extends Component {
     color: 'black',
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   calcPath(radius){
     let angleFromVal = this.props.value * 3.6;
     let cx=radius,cy=radius;
@@ -39,7 +35,6 @@ export class BasicGauge extends Component {
     }
   }
 
-  // x,y=50% r=10%
   render(){
     var radius = 50;
     return (

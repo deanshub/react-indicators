@@ -7,7 +7,7 @@ export class IndicatorPanel extends Component {
   constructor(props) {
     super(props);
     this.state={
-      type: 'gauge',
+      type: 'basic',
       subType: 'basic',
       minimum:0,
       maximum:100,

@@ -1,19 +1,32 @@
-.indicator.basic>.title{
-  font-size: 2em;
-  padding-right: 10px;
+.indicator.basic{
+  font-size: 1.5em;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.indicator.basic>*{
   display: inline;
 }
+.indicator.basic>.title{
+  font-size: 1.7em;
+}
 .indicator.basic>.seperator{
-  margin-right: 5px;
-  display: inline;
-  margin-left: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 1.2em;
 }
 .indicator.basic>.counter{
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.indicator.basic>.secondery>*{
   display: inline;
 }
-.indicator.basic>.icon{
-  margin-right: 5px;
+.indicator.basic>.secondery>.seperator{
   margin-left: 5px;
+  margin-right: 5px;
+}
+.indicator.basic>.secondery>.icon{
+  margin-right: 5px;
 }
