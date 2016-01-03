@@ -27,7 +27,7 @@ export class GaugeIndicator extends Component {
       <div className="indicator gauge">
         <Title value={this.props.title}/>
 
-        <SvgIndicatorPart name="gauge" type="basic" color={this.props.color} value={this.props.value}/>
+        <SvgIndicatorPart name="gauge" type={this.props.type} color={this.props.color} value={this.props.value}/>
         <Counter value={this.props.value} color={this.props.color} postfix="%" />
 
         <center>

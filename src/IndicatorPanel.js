@@ -7,8 +7,8 @@ export class IndicatorPanel extends Component {
   constructor(props) {
     super(props);
     this.state={
-      type: 'column',
-      subType: 'thermometer',
+      type: 'gauge',
+      subType: 'throttle',
       minimum:0,
       maximum:100,
       value: 78,
@@ -30,7 +30,7 @@ export class IndicatorPanel extends Component {
         column:['basic','thermometer'],
         bar:['basic'],
         pictogram:['basic'],
-        gauge:['basic'],
+        gauge:['basic','throttle','needle'],
       },
       iconsAvailable:[
         'thumb',

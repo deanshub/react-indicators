@@ -44,7 +44,9 @@ export class UltimateIndicator extends Component {
         basic:<PictogramIndicator {...this.props}/>,
       },
       gauge:{
-        basic:<GaugeIndicator {...this.props}/>,
+        basic:<GaugeIndicator {...others} type={subType}/>,
+        throttle:<GaugeIndicator {...others} type={subType}/>,
+        needle:<GaugeIndicator {...others} type={subType}/>,
       },
     };
 
